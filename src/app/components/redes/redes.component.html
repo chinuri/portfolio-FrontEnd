@@ -1,0 +1,32 @@
+<div class="iconos-redes-sociales align-items-end justify-content-end">
+  <div class="icono-twitter">
+    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+    <i class="bi bi-twitter text-light"></i>
+  </a>
+  </div>
+  <div class="icono-github">
+    <a href="https://github.com/chinuri" target="_blank" rel="noopener noreferrer">
+      <i class="bi bi-github text-light"></i>
+    </a>
+  </div>
+  <div class="icono-linkedin">
+    <a href="https://ar.linkedin.com/" target="_blank" rel="noopener noreferrer">
+      <i class="bi bi-linkedin text-light"></i>
+    </a>
+  </div>
+  <div class="icono-instagram">
+    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+      <i class="bi bi-instagram text-light"></i>
+    </a>  
+  </div>
+  <div class="icono-mail">
+    <a href="mailto:cchinuri@fi.uba.ar" target="_blank" rel="noopener noreferrer">
+      <i class="bi bi-envelope text-light"></i>
+    </a>
+  </div>
+  <div>
+    <button type="button" class="btn btn-light login" (click)="login()" *ngIf="!isLogged">Login</button>
+    <button type="button" class="btn btn-light login" (click)="onLogOut()" *ngIf="isLogged">Logout</button>
+  </div>
+
+</div>

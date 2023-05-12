@@ -1,0 +1,24 @@
+<div class="container-fluid acercade">
+  <div class="container-fluid boton-editar">
+    <button type="button" class="btn btn-warning" routerLink="/editacercade/1" *ngIf="isLogged">
+      <i class="bi bi-pencil-fill"></i>
+    </button>
+  </div>
+
+  <div class="row col-xs-12 col-sm-2 col-md-2 col-lg-2">
+    <img src="{{persona?.img}}" alt="Foto de Perfil" class="img-fluid" id="fotodeperfil">
+  </div>
+  <div class="col-xs-12 col-sm-2  col-md-2 col-lg-2 " class="descripcionperfil">
+    <p id="nombre"> {{persona?.nombre}} {{persona?.apellido}} </p>
+    <p class="titulo">Full Stack Developer Jr.</p>
+  </div>
+  <br><br>
+  <div class="col-xs-12 col-sm-8  col-md-8 col-lg-8">
+    <span class="descripcionperfil">
+      <h1 class="acerca">• Acerca de mí</h1>
+      <p class="acercademi">
+        {{persona?.descripcion}}
+      </p>
+    </span>
+  </div>
+</div>

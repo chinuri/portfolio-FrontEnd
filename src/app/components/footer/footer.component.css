@@ -1,0 +1,13 @@
+div {
+  background-color: #211588;
+}
+
+.caja {
+  min-height: 110px;
+  padding-top: 1%;
+}
+
+.textofooter {
+  font-family: 'Roboto', sans-serif;
+  font-size: 120%;
+}

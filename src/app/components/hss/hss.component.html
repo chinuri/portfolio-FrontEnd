@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <div class="row">
+    <h1 class="titulo">• Hard & Soft Skills</h1> 
+    <br><br><br><br><br>
+
+     <div class="news">
+      <button type="button" routerLink="/newskill" class="btn btn-success" *ngIf="isLogged">Nueva Skill</button>
+    </div>
+    <br>
+    <div class="col-sm-4 col-sm-4 col-lg-4 circulo" *ngFor="let skill of skill">
+      <circle-progress
+        [imageSrc]="''"
+        [title]="(skill.nombre)"
+        [showTitle]="true"
+        [titleColor]="'#212F3C'"
+        [showImage]="false"
+        [imageHeight]="50"
+        [imageWidth]="50"
+        [animateTitle]="false"
+        [animationDuration]="1000"
+        [showUnits]="false"
+        [showBackground]="false"
+        [showSubtitle]="false"
+        [clockwise]="false"
+        [startFromZero]="false"
+        [lazy]="true"
+        [percent]="(skill.porcentaje)"
+        [radius]="80"
+        [space]="-10"
+        [outerStrokeWidth]="10"
+        [innerStrokeWidth]="10"
+        [outerStrokeColor]="'#4882c2'"
+        [outerStrokeGradientStopColor]="'#53a9ff'"
+        [innerStrokeColor]="'#e7e8ea'"
+        [animation]="true"
+        [animationDuration]="300"
+      ></circle-progress>
+      <div>
+        <td *ngIf="isLogged"><button class="btn btn-warning" routerLink="/editskill/{{skill.id}}"><i class="bi bi-pencil-fill"></i></button></td>                    
+        <td *ngIf="isLogged"><button class="btn btn-danger"><i class="bi bi-x-circle" (click)="delete(skill.id)" style="font-size: 1rem;"></i></button></td>
+      </div>
+
+
+    </div>
+  </div>
+</div>

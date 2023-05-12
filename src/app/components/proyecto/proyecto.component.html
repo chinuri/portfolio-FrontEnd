@@ -1,0 +1,36 @@
+<div class="container-fluid proyecto">
+  <div class="row">
+    <div class="col-12 col-sm-6 col-md-10 col-lg-10">
+      <h1 class="titulo">• Proyectos</h1>
+      <br>
+      <div class="col-lg-12">
+        <button type="button" class="btn btn-success" routerLink="/newproyecto" *ngIf="isLogged">
+          Nuevo proyecto
+        </button>
+      </div>
+
+      <div class="col lg 1"></div>
+      <div class="col-lg-11">
+        <table class="table">
+          <tbody>
+            <tr *ngFor="let pro of proyecto">
+              <td> <h4 class="nombrep">{{pro.nombreP}}</h4> </td>
+              <td class="nombred"> {{pro.descripcionP}} </td>
+              <td class="nombred"> {{pro.fechaP}} </td>
+              
+              <td> <a class="nombred" href="{{pro.linkP}}">Repositorio</a> </td>
+              <td>  <img src="{{pro.urlP}}" alt="Foto de Proyecto" class="img-fluid imgp" id="fotodeproyecto" width="100px">  </td>
+              <td *ngIf="isLogged"><button class="btn btn-warning" routerLink="/editproyecto/{{pro.id}}"><i class="bi bi-pencil-fill" style="font-size: 1.2rem;"></i></button></td>
+                
+                
+              <td *ngIf="isLogged"><button class="btn btn-danger"><i class="bi bi-x-circle" (click)="delete(pro.id)" style="font-size: 1.2rem;"></i></button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      
+
+    </div>
+  </div>
+</div>

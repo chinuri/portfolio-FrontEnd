@@ -1,0 +1,73 @@
+  .acercade {
+  padding-left: 1%;
+}
+
+/* Nombre */
+#nombre {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  
+}
+
+/* Foto de Perfil */
+@media (min-width: 577px) {
+  #fotodeperfil {
+   position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    display: block;
+    top: -110px;
+
+  }
+}
+
+@media (max-width: 576px) {
+  #fotodeperfil {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    top: -110px;
+  }
+}
+
+.descripcionperfil {
+  position:relative;
+  top: -80px;
+}
+
+@media (max-width: 576px) {
+  .descripcionperfil {
+    position: relative;
+    top: -110px;
+  }
+}
+
+@media (min-width: 577px) {
+  .descripcionperfil {
+    position: relative;
+    top: -50px;
+  }
+}
+
+.boton-editar {
+  position: relative;
+  top: -120px;
+}
+
+.titulo {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.2rem;
+}
+
+.acerca {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2.9rem;
+}
+
+.acercademi {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+}

@@ -1,0 +1,47 @@
+<div class="container" *ngIf="proyecto">
+  <div class="row">
+    <div>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <br>
+          <label for="nombreP">Nombre del proyecto</label>
+          <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="proyecto.nombreP" required>
+          <br>
+        </div>
+        <div class="form-group">
+          <label for="descripcionP">Descripcion</label>
+          <input type="text" class="form-control" id="descripcionP" name="descripcionP" [(ngModel)]="proyecto.descripcionP" required>
+          <br>
+        </div>
+
+        <div class="form-group">
+          <label for="fechaP">Fecha</label>
+          <input type="text" class="form-control" id="fechaP" name="fechaP" [(ngModel)]="proyecto.fechaP" required>
+          <br>
+        </div>
+
+        <div class="form-group">
+          <label for="linkP">URL del repositorio</label>
+          <input type="text" class="form-control" id="linkP" name="linkP" [(ngModel)]="proyecto.linkP" required>
+          <br>
+        </div>
+
+        <div class="form-group">
+          <label for="urlP">URL de la imagen</label>
+          <input type="text" class="form-control" id="urlP" name="urlP" [(ngModel)]="proyecto.urlP" required>
+        </div>
+        
+        <br>
+
+        <div class="img-preview">
+          <img src="{{proyecto.urlP}}" width="100px">
+        </div>
+        <br>
+
+        <button class="btn btn-primary">
+          Editar proyecto
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container-fluid educacion">
+  <div class="row">
+    <div class="col-12 col-sm-6 col-md-10 col-lg-10">
+      <h1 class="titulo">• Educación</h1>
+
+      <div class="col-lg-12">
+        <button type="button" class="btn btn-success" routerLink="/nuevaedu" *ngIf="isLogged">
+          Agregar educación
+        </button>
+      </div>
+
+      <div class="col lg 1"></div>
+      <div class="col-lg-11">
+        <table class="table">
+          <br><br>
+          <tbody>
+            <tr *ngFor="let Educacion of educacion">
+              <td> <h4 class="nombre">{{Educacion.nombreE}}</h4> </td>
+              <td class="descripcion"> {{Educacion.descripcionE}} </td>
+              <td>  <img src="{{Educacion.urlE}}" alt="Foto de Educacion" class="img-fluid imgp" id="fotodeeducacion" width="100px">  </td>
+              <td *ngIf="isLogged"><button class="btn btn-warning" routerLink="/editedu/{{Educacion.id}}"><i class="bi bi-pencil-fill" style="font-size: 1.2rem;"></i></button></td>
+                
+                
+              <td *ngIf="isLogged"><button class="btn btn-danger"><i class="bi bi-x-circle" (click)="delete(Educacion.id)" style="font-size: 1.2rem;"></i></button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+
+    </div>
+  </div>
+</div>
