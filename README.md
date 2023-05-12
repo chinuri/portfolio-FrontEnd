@@ -18,7 +18,7 @@
   
   En este repositorio se encuentra todo lo relacionado al **Frontend** del proyecto, para acceder al **Backend** [**ir aquí**](https://github.com/chinuri/portfolio-BackEnd "aquí")
 
-  🔗 **Web:** [https://frontend-1-88288.web.app//](https://frontend-1-88288.web.app/ "web.app")
+  🔗 **Web:** [https://frontend-1-88288.web.app/](https://frontend-1-88288.web.app/ "web.app")
 
 
 
